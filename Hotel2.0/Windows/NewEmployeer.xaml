@@ -1,0 +1,106 @@
+﻿<Window x:Class="Hotel2._0.Windows.NewEmployeer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel2._0"
+        mc:Ignorable="d"
+        Title="NewClient" Height="430" Width="500" Icon="/Image/icon.png" FontFamily="Times New Roman" FontSize="16" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Border CornerRadius="10"
+            BorderThickness="9" 
+            Background="#FF46467C" >
+        <Border Background="White" 
+                Opacity="0.95" 
+                CornerRadius="10" 
+                BorderThickness="9" Margin="1.2,0.2,0.2,1.6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="411*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+                <WrapPanel  HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                    <Image Source="/Image/icon.png"
+                       HorizontalAlignment="Left"/>
+                    <Label Grid.Row="0"
+                       Content="Добавление сотрудника"
+                       VerticalContentAlignment="Center"
+                       FontSize="20"  Width="240" />
+                </WrapPanel>
+
+                <Button x:Name="Close"  Width="26" Height="24" 
+                        HorizontalAlignment="Right" 
+                        Grid.Column="1"
+                        VerticalAlignment="Top"
+                        Style="{StaticResource ButtonStateMenu}"
+                        Click="Close_Click" Margin="0,0,-0.2,0">
+                    <Image Source="/Image/close.png" />
+                </Button>
+                <StackPanel HorizontalAlignment="Left"
+                            Width="233" Grid.Column="0"
+                            Margin="0,0,0,2.4" 
+                            Grid.Row="1">
+                    <Label Content="Фамилия" />
+                    <TextBox x:Name="SurnameTB"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         Text=""
+                         />
+                    <Label Content="Имя"/>
+                    <TextBox x:Name="NameTB"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         Text=""
+                         />
+                    <Label Content="Отчество"/>
+                    <TextBox x:Name="PatronymicTB"
+                         Width="200"
+                         HorizontalAlignment="Left"/>
+                    <Label Content="Паспортные данные:"/>
+                    <Label Content="Серия"/>
+                    <TextBox x:Name="SeriaTB"
+                         Width="200"
+                         HorizontalAlignment="Left"/>
+                    <Label Content="Номер"/>
+                    <TextBox x:Name="PasNumTB"
+                         Width="200"
+                         HorizontalAlignment="Left"/>
+                    <Label Content="Должность:"/>
+                    <ComboBox x:Name="Post" 
+                              Height="25"   
+                              SelectedItem="{Binding Post, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,32.8,0" />
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Right" 
+                            Width="233" Grid.Column="1"
+                            Margin="0,0,0,2.4" 
+                            Grid.Row="1" >
+                    <Label Content="Пол:"/>
+                    <ComboBox x:Name="Gen" 
+                              Height="25"   
+                              SelectedItem="{Binding Gen, UpdateSourceTrigger=PropertyChanged}" 
+                              Margin="0,0,32.8,0" />
+                    <Label Content="Дата рождения:"/>
+                    <DatePicker x:Name="Birthday" Width="200" HorizontalAlignment="Left" />
+                    <Label Content="Дата начала работы:"/>
+                    <DatePicker x:Name="work" Width="200" HorizontalAlignment="Left"/>
+                    <Label Content="ИНН"/>
+                    <TextBox x:Name="InnTB"
+                         Width="190"
+                         HorizontalAlignment="Left"/>
+                    <Label Content="Снилс"/>
+                    <TextBox x:Name="snilsTB"
+                         Width="200"
+                         HorizontalAlignment="Left"/>
+                </StackPanel>
+                <Button Content="Добавить" Grid.Column="1" Grid.Row="2" Style="{StaticResource TypeButton}" Click="Button_Click" Height="20" Width="100"/>
+                <TextBox x:Name="kostil" Visibility="Hidden" />
+            </Grid>
+        </Border>
+    </Border>
+</Window>
+

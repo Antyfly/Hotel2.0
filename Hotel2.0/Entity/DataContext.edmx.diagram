@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dba9b4f2e26c4fff979bc5b571d6bc9c" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="HotelModel.Employers" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.EmployersPost" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Gender" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Guest" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Hotel" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.Room" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelModel.TipeRoom" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="HotelModel.FK_Employers_EmployersPost" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_Employers_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_Employers_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_Guest_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_Guest_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_Room_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelModel.FK_Room_TipeRoom" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HotelModel.kastil" Width="1.5" PointX="8.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
