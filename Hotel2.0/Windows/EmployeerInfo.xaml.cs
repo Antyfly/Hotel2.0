@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static Hotel2._0.Entity.AppData;
+using static Hotel2._0.Windows.Delta;
 
 namespace Hotel2._0.Windows
 {
@@ -21,7 +22,8 @@ namespace Hotel2._0.Windows
     /// </summary>
     public partial class EmployeerInfo : Window
     {
-       // Entities3 context = new Entities3();
+        public Employers employeers;
+        //List<int> empsourse = new List<int>();
         public EmployeerInfo(Employers emp)
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace Hotel2._0.Windows
             SNILS.Text = "Страховой полис: " + emp.SNILS;
             Gender.Text = "Пол: " + emp.Gender1.GenderName;
             Age.Text = "Возраст: " + emp.Age;
-
+            employeers = emp;
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
@@ -45,6 +47,15 @@ namespace Hotel2._0.Windows
         {
 
             this.Close();
+        }
+
+        private void Delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            context.Employers.Remove(employeers);
+            context.SaveChanges();
+            MessageBox.Show("Сотрудник удален!", "Done", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
+            
         }
     }
 }

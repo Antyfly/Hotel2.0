@@ -52,7 +52,8 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="Back_btn" Content="Назад" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Click="Back_btn_Click" Style="{StaticResource TypeButton}" Width="120" Margin="0,0,31,10" />
+                    <Button x:Name="Back_btn" Content="Назад" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Click="Back_btn_Click" Style="{StaticResource TypeButton}" Width="120" />
+                    <Button x:Name="Delete_btn" Content="Удалить" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Click="Delete_btn_Click" Style="{StaticResource TypeButton}" Width="120" Grid.Column="1"/>
                 </Grid>
             </Grid>
         </Border>

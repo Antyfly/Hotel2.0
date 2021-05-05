@@ -21,7 +21,7 @@ namespace Hotel2._0.Windows
     /// </summary>
     public partial class Window1 : Window
     {
-       // Entities3 context = new Entities3();
+        public Guest gues;
         public  Window1(Guest guest)
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Hotel2._0.Windows
             Phone.Text = "Телефон: " + guest.Phone;
             Cost.Text = "Цена за проживание: " + guest.Сost;
             Idroom.Text = "Выбранный номер: " + guest.Room.Number;
-
+            gues = guest;
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
@@ -41,6 +41,14 @@ namespace Hotel2._0.Windows
 
         private void Back_btn_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            context.Guest.Remove(gues);
+            context.SaveChanges();
+            MessageBox.Show("Клиент удален!", "Done", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
         }
     }

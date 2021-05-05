@@ -73,7 +73,7 @@ namespace Hotel2._0.Windows
                         ID_Room = BoxNumber.SelectedIndex,
                         Quantity = Convert.ToInt32(Quantity.Text),
                         Phone = PhoneBox.Text,
-                       // Cost = context.
+                        Сost = Convert.ToInt32(Cost.Content),
                     }); ;
                     MessageBox.Show("Успех");
                     context.SaveChanges();

@@ -38,7 +38,7 @@ namespace Hotel2._0.Windows
             empsourse = context.Employers.Where(i => i.HotelID == 1).ToList();
         }
 
-        public void Update()
+        public  void Update()
         {
             List.ItemsSource = datasourse;
             Employee.ItemsSource = empsourse;
@@ -149,6 +149,7 @@ namespace Hotel2._0.Windows
             {
                 EmployeerInfo wi = new EmployeerInfo(emp);
                 wi.ShowDialog();
+                Update();
 
             }
         }
